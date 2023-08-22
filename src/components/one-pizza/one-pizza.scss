@@ -1,0 +1,103 @@
+.pizza {
+  width: 210px;
+  height: 350px;
+  margin: 30px 20px 30px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  //   background-color: brown;
+  span {
+    font-weight: bold;
+  }
+}
+
+.pizza-image {
+  width: 200px;
+  height: 200px;
+}
+
+.pizza-choice-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(243, 243, 243);
+  font-size: 14px;
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 190px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    li {
+      list-style: none;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(203, 203, 203);
+      border-radius: 5px;
+    }
+    li:hover {
+      background-color: #fff;
+      color: black;
+      cursor: default;
+    }
+    .active {
+      color: rgb(0, 0, 0);
+      background-color: #fff;
+    }
+  }
+}
+
+.pizza-types {
+  margin-top: 10px;
+  width: 190px;
+  height: 30px;
+  li {
+    width: 90px;
+  }
+}
+
+.pizza-sizes {
+  width: 190px;
+  height: 30px;
+  //   background-color: aqua;
+  ul {
+    // background-color: #b42323;
+    li {
+      width: 60px;
+    }
+  }
+}
+
+.pizza-price-container {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.add-button {
+  background-color: #fff;
+  border: 1px solid rgb(236, 106, 54);
+  color: rgb(236, 106, 54);
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+}
+.add-button:hover {
+  background-color: rgb(236, 106, 54);
+  color: #fff;
+  cursor: pointer;
+}
