@@ -1,17 +1,18 @@
 import "./pizzas.scss";
 import OnePizza from "../one-pizza";
-import pizzas from "../assets/pizzas.json";
-console.log(pizzas);
+import ButtonsGroup from "../buttons-group";
 
-let key = 0;
-
-const Pizzas = () => {
+const Pizzas = ({ pizzas }) => {
   return (
-    <div className="pizzas-container">
-      {pizzas.map((pizza) => (
-        <OnePizza key={key++} {...pizza} />
-      ))}
-    </div>
+    <>
+      <ButtonsGroup />
+      <h1>Все пиццы</h1>
+      <div className="pizzas-container">
+        {pizzas.map((pizza) => (
+          <OnePizza key={pizza.id} {...pizza} />
+        ))}
+      </div>
+    </>
   );
 };
 

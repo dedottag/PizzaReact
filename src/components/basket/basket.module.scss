@@ -1,0 +1,32 @@
+.basket-container {
+  max-width: 1100px;
+  max-height: 800px;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.img {
+  width: 300px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  width: 400px;
+  font-size: 14px;
+  color: rgb(134, 134, 134);
+  font-weight: normal;
+}
+
+.back-to-home-button {
+  margin-bottom: 40px;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(40, 40, 40);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
