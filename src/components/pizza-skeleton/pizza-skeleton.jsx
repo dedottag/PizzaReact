@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const Skeleton = (props) => (
+const Skeleton = ({ props }) => (
   <>
     {[...new Array(10)].map((_, index) => (
       <div className="pizza" key={index}>

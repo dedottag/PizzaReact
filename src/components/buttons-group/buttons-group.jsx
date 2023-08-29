@@ -1,11 +1,13 @@
 import "./buttons-group.scss";
-import { useState } from "react";
 import Sort from "../sort";
 
 let key = 0;
-const ButtonsGroup = () => {
-  const [active, setActive] = useState(0);
-
+const ButtonsGroup = ({
+  onClickCategory,
+  active,
+  setLoading,
+  setSortproperty,
+}) => {
   const buttonsNames = [
     "Все",
     "Мясные",
@@ -17,20 +19,23 @@ const ButtonsGroup = () => {
 
   return (
     <div className="buttons-container">
-      <ul>
-        {buttonsNames.map((button, i) => (
-          <li
-            className={active === i ? "button active" : "button"}
-            onClick={() => {
-              setActive(i);
-            }}
-            key={key++}
-          >
-            {button}
-          </li>
-        ))}
-      </ul>
-      <Sort />
+      <>
+        <ul>
+          {buttonsNames.map((button, i) => (
+            <li
+              className={active === i ? "button active" : "button"}
+              onClick={() => {
+                onClickCategory(i);
+                setLoading(true);
+              }}
+              key={key++}
+            >
+              {button}
+            </li>
+          ))}
+        </ul>
+      </>
+      <Sort setSortproperty={setSortproperty} />
     </div>
   );
 };

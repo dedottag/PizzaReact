@@ -1,0 +1,36 @@
+.root {
+  li {
+    list-style: none;
+    a {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgb(236, 106, 54);
+      border-radius: 50%;
+      font-size: 18px;
+      color: rgb(236, 106, 54);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+      &:hover {
+        background-color: rgb(236, 106, 54);
+        color: white;
+      }
+    }
+  }
+
+  :global {
+    .selected {
+      a {
+        background-color: rgb(236, 106, 54);
+        color: white;
+      }
+    }
+  }
+}
+
+.container {
+  ul {
+    display: flex;
+  }
+}

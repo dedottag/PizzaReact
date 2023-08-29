@@ -9,13 +9,21 @@
   align-items: center;
   //   background-color: brown;
   ul {
-    width: 700px;
+    max-width: 1100px;
     margin: 0px;
     padding: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-weight: bold;
     font-size: 14px;
+    // background-color: brown;
+    @media (max-width: 1000px) {
+      flex-wrap: wrap;
+    }
+  }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    margin-top: 30px;
   }
 }
 .button {
@@ -23,6 +31,7 @@
   background-color: rgb(243, 243, 243);
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
+  margin-right: 10px;
 }
 .button:hover {
   background-color: rgb(40, 40, 40);

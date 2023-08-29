@@ -1,12 +1,16 @@
 import "./sort.scss";
 import { useState } from "react";
 
-const Sort = () => {
+const Sort = ({ setSortproperty }) => {
   const [sort, setSort] = useState(false);
   const [choice, setChoice] = useState("популярности");
   const [active, setActive] = useState(0);
 
-  const words = ["популярности", "цене", "алфавиту"];
+  const words = [
+    { name: "популярности", sortProperty: "rating" },
+    { name: "цене", sortProperty: "price" },
+    { name: "алфавиту", sortProperty: "title" },
+  ];
 
   return (
     <div className="sort-container">
@@ -20,17 +24,18 @@ const Sort = () => {
         {sort && (
           <div className="choice-container">
             <ul>
-              {words.map((word, i) => (
+              {words.map((obj, i) => (
                 <li
                   className={active === i ? "list-active" : ""}
                   key={i}
                   onClick={() => {
                     setSort(false);
-                    setChoice(word);
+                    setChoice(obj.name);
                     setActive(i);
+                    setSortproperty(obj.sortProperty);
                   }}
                 >
-                  {word}
+                  {obj.name}
                 </li>
               ))}
             </ul>
